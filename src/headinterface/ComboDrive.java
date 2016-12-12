@@ -10,7 +10,7 @@ package headinterface;
  *
  * @author Annu
  */
-public class ComboDrive extends DVDRecoder ,CDRecoder {
+public class ComboDrive extends DVDRecoder ,CDRecoder {//error becoz both are classes can't extend 2  classes
     
     public void test()
     {

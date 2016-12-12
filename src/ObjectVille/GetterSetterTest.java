@@ -19,7 +19,7 @@ public class GetterSetterTest {
        // gs.size=10;//error size has a private access in GetterSetter
         gs.setSize(10);
         System.out.println(gs.getSize());
-       // gs.publicsize=12;
+       // gs.publicsize=12; //error size was accessible at package level as no access modifier provided
         
     }
     
