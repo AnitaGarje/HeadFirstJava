@@ -17,25 +17,21 @@ import javax.swing.JFrame;
  */
 public class SimpleGUI implements ActionListener {//step 1
    JButton clickme;
-    public static void main(String[] args) {
-        JFrame frame=new JFrame();
-        
-        SimpleGUI sg=new SimpleGUI();
-        sg.clickme=new JButton("Click Me!!!");
-        sg.clickme.addActionListener(sg);    //register
-        
-        frame.getContentPane().add(sg.clickme);
+   JFrame frame;
+    public  SimpleGUI() {
+        this.frame=new JFrame();
+        this.clickme=new JButton("Click Me!!!");
+        this.clickme.addActionListener(this);    //register
+        frame.getContentPane().add(clickme);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 300);
-        frame.setVisible(true);
-   
-        
+        frame.setVisible(true);   
     }
     
     @Override        
-    public void actionPerformed(ActionEvent ae)
-    {
-        clickme.setText("I have been clicked");
+    public void actionPerformed(ActionEvent ae)// decide next action n note that we are not calling
+    {// this method directly anywhere still after clicking it gets invoked due t regiterig your object to Actionlistener
+        clickme.setText("I have been clicked");//Actionlistner does that for u
     }
 
   

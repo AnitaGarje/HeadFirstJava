@@ -11,5 +11,9 @@ package Chapt12GUI;
  * @author Annu
  */
 public class SimpleGUITest {
+    public static void main(String[] args) {
+        SimpleGUI sg=new SimpleGUI();
+        //sg.registerObject();
+    }
     
 }
